@@ -1,4 +1,6 @@
-package day1;
+package advent.day1;
+
+import advent.utils.Utils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -28,10 +30,9 @@ public class Part2 {
 
   public static void main(String[] args) {
     for (String filename : args) {
-      File f = new File(filename);
       Scanner in;
       try {
-        in = new Scanner(f);
+        in = Utils.filenameToScanner(filename);
       } catch (FileNotFoundException e) {
         continue;
       }
